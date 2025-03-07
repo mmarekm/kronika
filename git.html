@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<title>git bash</title>
+	<meta name="description" content="wybierz kategorię programowania" />
+	<meta name="keywords" content="Programowanie" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="stylesheet" href="styleProgramowanie.css" type="text/css" />
+</head>
+
+<body style="font-size: 12px;">
+<div>
+Dawniej był <b>svn</b>, który w odróżnienia od <b>git</b>, w razie awarii dawał tylko najnowszą wersję, a nie całą historię wszystkich wersji.<br/>
+</div>
+<div>
+	<div style="float: left; background-color: green; width: 574px; margin-top: 30px;">
+		<div style="text-align: center;">
+			<div>
+			RADY
+			</div>
+			<div>
+			stosować często <b>git status</b>, commity, <b>pull --rebase</b><br/>
+			w <b>rebase</b> z racji prostej struktury, łatwiej znaleźć błąd niż w <b>merge</b><br/>
+			</div>
+		</div>
+		
+		
+		<div style= "border: 3px solid white; text-align: center;">
+		KOMENDY
+		</div>
+	
+		<div style="float: left; border: 3px solid white; padding: 5px;">
+		git –version<br/>
+		$ git config --global user.name<br/> 
+		$ git config --global user.email<br/>
+		gitk<br/>
+		code .<br/>
+		klawisz <b>q</b><br/>
+		git init<br/>
+		git branch<br/>
+		ls<br/>
+		ls -a<br/>
+		git status<br/>
+		touch plik.txt<br/>
+		git add plik.txt<br/>
+		git add -A<br/>
+		git commit -m<br/>
+		git commit -am”komentarz”<br/>
+		git log<br/>
+		git rm plik.txt<br/>
+		git reset --hard<br/>
+		<b>git reset --hard origin/main~1</b><br/>
+		git checkout plik.txt
+		</div>
+		
+		<div style="float: left; border: 3px solid white; padding: 5px;">
+		<br/>
+		"Marek"<br/>
+		marekwpracymalicki@gmail.com<br/>
+		git gui (forma graficzna)<br/>
+		kontynuacja pracy w visual code<br/>
+		wychodzi z okna wyświetlania<br/>
+		tworzy repozytorium<br/>
+		pokazuje aktualny branch<br/>
+		wyświetla pliki<br/>
+		też pliki ukryte <span style="font-size: 8px;">z tego ukrytego folderu tylko git sobie korzysta</span><br/>
+		status repozytorium<br/>
+		tworzy plik.txt (untracked)<br/>
+		sprawia tracked (zmodyfikowany trzeba ponownie dodać)<br/>
+		tracked wszystkich plików<br/>
+		komentarz commita, sprawia też przeniesienie do repository<br/>
+		w jednym dodanie do stagingu i commit<br/>
+		pokazuje historie commitów (ich hash i branch)<br/>
+		usuwa zakomitowany już plik<br/>
+		wszelkie niezapisane zmiany cofa<br/>
+		tylko w tym pliku cofa zmiany
+		</div>
+		
+		<div style="clear: both;"></div>
+		
+		<div style="background-color: lime; color: black;">
+			<div style="text-align: center;">
+			konflikt<br/>
+			</div>
+			
+			<div>
+			gdy więcej osób zmienia tę samą linijkę kodu, to wtedy <b>git pull --rebase</b> poda CONFLICT<br/>
+			należy np. ręcznie naprawić, po czym <b>git rebase --continue</b><br/>
+			(można też w plikach tekstowych)<br/>
+			<b>git rebase --abort</b> - jeśli większy problem, że trzeba z kimś usiąść, popracować
+			</div>
+		</div>
+	</div>
+	
+	<div style="float: left; margin-left: 40px;" >
+		<div style="background-color: orangered; margin-left: auto; margin-right: auto; width: 654px; margin-top: 30px; color: black;">
+			<div style= "border: 3px solid white; text-align: center;">
+			obszary git
+			</div>
+			
+			<div>
+			<div style="float: left; border: 3px solid white; padding: 5px;">
+			working directory<br/>
+			staging area<br/>
+			repository
+			</div>
+			
+			<div  style="float: left; border: 3px solid white; padding: 5px;">
+			nasz folder, w którym są pliki/foldery tracked i untracked(o których git jeszcze nie wie)<br/>
+			pliki/foldery tracked, które można unstage, które będą commitowane<br/><br/>
+			</div>
+			
+			<div style="clear: both;"></div>
+			</div>
+		</div>	
+		
+		<div style="background-color: blue; margin-right: auto; margin-top: 20px; color: black; width: 854px; padding: 5px; border: 3px solid white;">
+		<b>commit</b> –  zmiana na gałęzi (najwyższy poziom to master (main)) z „komentarzem tej czynności” i dodanie go do repozytorium,<br/>
+		np. <em>git commit -m”dodajemy pierwszy plik 1.txt”</em>, którą wprowadzamy do kodu w naszym lokalnym repozytorium (też offline),<br/>którą później można „wypchnąć” do zewnętrznego rep.(gitHub)
+		</div>
+		
+		<div style="background-color: gray; margin-right: auto; margin-top: 20px; color: black; width: 854px;">
+			<div style="text-align: center; border: 3px solid white; padding: 5px;">
+			ruchy na gałęziach <span style="font-size: 8px;">Na <b>master branch</b> powinien być idealny kod. Do testów, code review itd., tworzymy branch</span>
+			</div>
+			
+			<div style="border: 3px solid white; ">
+				<div style="float: left; ; padding: 5px; border: 3px solid white;">
+				git checkout -b”roboczy”<br/>
+				git checkout master<br/>
+				git merge roboczy<br/>
+				</div>
+				
+				<div style="float: left; padding: 5px; border: 3px solid white; width: 669px;">
+				tworzy i od razu przełącza na nowego brancha robiąc też kopię powyższego<br/>
+				przełącza nas na master<br/>
+				dołącza commity na master<br/>
+				</div>
+				
+				<div style="clear: both;"></div>
+			</div>
+		</div>
+		
+		<div style="width: 854px; margin-top: 20px; background-color: white; color: tomato;">
+			<div>
+			Po utworzonym repozytorium w GitHub
+			</div>
+			
+			<div>
+			1.do git wklejamy np. <b>git remote add origin https://github.com/mmarekm/git-kurs.git.</b> informując, dokąd ma robić push<br/>
+			2. można olać, by nasz branch nazywał się master, a nie main<br/>
+			3. kopiujemy do git ale zmieniając na master, czyli <b>git push -u origin master</b>
+			</div>
+			
+			<div>
+				<div style="float: left; margin-top: 5px;">
+				gitignore<br/>
+				git clone https://github.com/mmarekm/git-kurs.git.<br/>
+				git push<br/>
+				git pull --rebase<br/><br/><br/>
+				token dostępu
+				</div>
+				
+				<div style="float: left; margin-top: 5px; margin-left: 10px;">
+				których plików git nie będzie obserwował<br/>
+				klonuje dane repozytorium z gitHub<br/>
+				wypycha np. na gitHub<br/>
+				jeśli nie da się push (ktoś modyfikował), wpierw pobieramy do siebie, po czym już push<br/><br/>
+				prawy górny róg → settings → developer settings →<br/> personal access tokens → tokens (classic) → create new token
+				</div>
+				
+				<div style="clear: both;"></div>
+			</div>
+		</div>
+	</div>	
+	<div style="clear: both;"></div>
+	
+	<div style="margin-top: 20px; background-color: #333333; opacity: 0.8; border: 2px dotted white; padding: 5px;">
+		<div style="text-align: center;">
+		<b>VI</b>
+		</div>
+		
+		<div>
+			<div style="float: left;">
+			stosowany przy np.<br/>
+			commitach po konflikatch<br/>
+			dodawaniu do git ignore<br/>
+			interaktywnym <b>rebase</b>
+			</div>
+			<br/>
+			
+			<div style="float: left; margin-left: 20px;">
+			escape i wq (zapisać i opuścić)<br/>
+			vi .gitignore (i wpisujemy wybrane pliki i po czym należy go dodać do repozytorium)<br/>
+			git rebase -i HEAD~2 (liczba ostatnich, które chcemy do interaktywnego w vi albo bierzemy hash commitów git rebase -i hash<br/>
+			</div>
+		
+			<div style="clear: both;"></div>
+		inne komendy:<br/>
+		pick – bierze commita i zostawia bez zmian<br/>
+		r – zmiana nazwy commita<br/>
+		e – praca dalej w rebase: można zmienić nazwę, edytować (ale potem trzeba dodać znowu add)<br/>
+		git rebase --continue kontynuuje<br/>
+		s – squash, łączy commity ale zachowując nazwę<br/>
+		f – fixed up, tak samo, ale zostanie nazwa commita do którego się dołączy <span style="font-size: 8px;">uwaga, bo git zaprotestuje, bo mu się commity nie zgodzą, więc trzeba zrobić push force(ostrożnie!)</span>
+		</div>
+	</div>
+</div>
+</body>
+</html>
