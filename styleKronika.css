@@ -1,0 +1,185 @@
+body {
+	background-color: papayawhip;
+	font-size: 26px;
+}
+/* body:has(> img:only-child):not(:has(:not(img))) > img {
+  display: block;
+  margin: 0 auto;
+  max-width: 95vw;
+  max-height: 95vh;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  border: 4px solid white;
+  background: white;
+  object-fit: contain;
+  padding: 4px;
+}
+body > img:only-child {
+  display: block;
+  max-width: 95vw;
+  max-height: 95vh;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border: 5px solid white;
+  background: white;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+} */
+.rok {
+	width: 100%;
+	box-sizing: border-box;
+	border: 3px dotted lime;
+	padding: 16px;
+	border-radius: 50px;
+	margin: 20px 0;
+	background-color: #EEDEC4;
+}
+.numerRoku {
+	text-align: center;
+	border: 5px solid green;
+	border-radius: 50px;
+	letter-spacing: 10px;
+	padding: 10px;
+	font-weight: 700;
+	width: 300px;
+	font-size: 33px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.wydarzenia {
+	position: relative;
+}
+.wydarzenie {
+	display: inline-block;
+	margin: 16px 30px;
+	border: 4px solid yellow;
+	border-radius: 80px;
+	padding: 15px;
+	color: white;
+	background-color: #DDCDB3;
+}
+.wydarzenie:hover, .dziennik:hover {
+	cursor: pointer;
+	background-color: #BBAB91;
+}
+.wydarzenieSwiatlo {
+	background-color: white;
+	color: black;
+}
+.wydarzenieSmutniej
+{
+	background-color: orange;
+	color: black;
+}
+.wydarzenieDzialka {
+	color: limegreen;
+	background-color: darkgreen;
+}
+.ramkaDzialka {
+	border: 4px solid darkgreen;
+	color: limegreen;
+}
+.wydarzenieDzielo {
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.wydarzenieEdukacja {
+	color: red;
+	background-color: cyan;
+}
+.intencje {
+	text-align: center;
+}
+.intencja {
+	width: 30%;
+	font-size: 20px;
+	color: white;
+	display: inline-block;
+	border: 2px dotted white;
+	padding: 10px;
+	border-radius: 50px;
+	margin-bottom: 30px;
+}
+.opis {
+	font-size: 20px;
+	margin: 20px;
+}
+.wysrodkowany {
+	text-align: center;
+}
+.duzy {
+	font-size: 30px;
+}
+.obramowany {
+	border: 2px solid black;
+	padding: 5px;
+}
+.rozdzial {
+	text-align: center;
+	letter-spacing: 7px;
+	font-size: 50px;
+	margin: 20px;
+}
+.mniejszy {
+	font-size: 33px;
+}
+.osobno {
+	box-sizing: border-box;
+	width: 48%;
+	display: inline-block;
+	border: 5px double cyan;
+	vertical-align: top;
+	margin: 10px;
+}
+.elementWRamce {
+	display: inline-block;
+	border: 5px solid cyan;
+	border-radius: 20px;
+	margin: 10px;
+	width: 200px;
+	text-align: center;
+	padding: 10px;
+	vertical-align: top;
+	opacity: 0.7;
+}
+.tlo {
+	background-color: papayawhip;
+}
+.imie {
+	text-align: center;
+	letter-spacing: 5px;
+	font-size: 40px;
+	color: lime;
+	margin: 5px;
+}
+.dziennik {
+	position: absolute;
+	font-size: 20px;
+    bottom: 20px;
+    right: 20px;
+	color: black;
+    text-align: center;
+	border: 2px solid black;
+	border-radius: 10px;
+	padding: 5px;
+}
+.wystep {
+	display: flex;
+	gap: 20px;
+}
+.madrosc {
+	text-align: center;
+	color: gold;
+	background-color: white;
+	opacity: 0.9;
+	width: 80%;
+	margin: auto;
+	padding: 20px;
+	position: relative;
+	padding-bottom: 50px;
+}
+.podpis {
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
+	color: yellow;
+}
